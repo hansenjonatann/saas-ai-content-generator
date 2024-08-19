@@ -14,7 +14,7 @@ export default function Dashboard() {
         />
 
         {/* Template List Section  */}
-        <TemplateListSection />
+        <TemplateListSection userSearchInput={userSearchInput} />
       </div>
     </>
   );
