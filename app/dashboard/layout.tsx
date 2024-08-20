@@ -6,7 +6,7 @@ export default function DashboardLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <>
+    <div className="bg-slate-100 h-screen">
       <div className="md:w-64 hidden md:block fixed">
         <SideNav />
       </div>
@@ -14,6 +14,6 @@ export default function DashboardLayout({
         <Header />
         {children}
       </div>
-    </>
+    </div>
   );
 }
