@@ -1,6 +1,7 @@
 "use client";
 import { FileClock, Home, Settings, WalletCards } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function SideNav() {
@@ -43,8 +44,10 @@ export default function SideNav() {
               path == menu.path && "bg-primary text-white"
             }`}
           >
-            <menu.icon className="w-6 h-6" />
-            <h2 className="text-lg">{menu.name}</h2>
+            <Link href={menu.path} className="flex gap-2">
+              <menu.icon className="w-6 h-6" />
+              <h2 className="text-lg">{menu.name}</h2>
+            </Link>
           </div>
         ))}
       </div>

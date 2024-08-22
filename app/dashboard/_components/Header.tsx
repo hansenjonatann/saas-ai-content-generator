@@ -1,3 +1,5 @@
+"use client";
+import { UserButton } from "@clerk/nextjs";
 import { Search } from "lucide-react";
 
 export default function Header() {
@@ -8,10 +10,11 @@ export default function Header() {
         <input type="text" placeholder="Search..." className="outline-none" />
       </div>
       <hr className="my-5" />
-      <div>
+      <div className="flex gap-2">
         <h2 className="bg-primary p-1 rounded-full text-xs text-white px-2">
           Join Membership just for $9.99/Month{" "}
         </h2>
+        <UserButton afterSignOutUrl="/sign-in" />
       </div>
     </div>
   );
